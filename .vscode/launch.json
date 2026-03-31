@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-OkApplication<ok>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.tag.ok.OkApplication",
+            "projectName": "ok",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
