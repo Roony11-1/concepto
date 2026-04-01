@@ -1,0 +1,64 @@
+####################################
+# General
+####################################
+.DS_Store
+Thumbs.db
+
+####################################
+# VSCode
+####################################
+.vscode/
+
+####################################
+# Python
+####################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+.env/
+.env.*
+
+# Archivos de dependencias compiladas
+*.egg-info/
+dist/
+build/
+
+# Logs
+*.log
+
+####################################
+# Java / Maven
+####################################
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Maven wrapper logs
+.mvn/wrapper/maven-wrapper.jar
+
+####################################
+# Spring Boot
+####################################
+*.class
+
+####################################
+# Archivos de configuración sensibles
+####################################
+application.properties
+application.yml
+.env
+
+####################################
+# Docker
+####################################
+docker-compose.override.yml
+
+####################################
+# Otros
+####################################
+*.swp
+*.swo
