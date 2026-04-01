@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mapa GeoJSON</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+  <style>
+    #map {
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Crear mapa
+  const map = L.map('map').setView([-33.45, -70.66], 10); // Santiago por ejemplo
+
+  // Capa base (OpenStreetMap)
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+  }).addTo(map);
+
+  // Cargar tu GeoJSON
+  fetch('export.geojson')
+    .then(res => res.json())
+    .then(data => {
+      const geoLayer = L.geoJSON(data).addTo(map);
+
+      // Ajustar zoom al contenido
+      map.fitBounds(geoLayer.getBounds());
+    });
+
+</script>
+
+</body>
+</html>
